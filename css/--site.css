@@ -1,0 +1,90 @@
+/*site.css*/
+
+.dp5,.dp10,.dp15,.dp20,.dp25,.dp30,.dp33,.dp35,.dp40,.dp45,.dp50,.dp55,.dp60,.dp65,.dp67,.dp70,.dp75,.dp80,.dp85,.dp90,.dp95,.dp100{float:left;display:inline;}
+
+.dp5{width:5%;}
+.dp10{width:10%;*width:9.9%;}
+.dp15{width:15%;*width:14.9%;}
+.dp20{width:20%;*width:19.9%;}
+.dp25{width:25%;*width:24.9%; }
+.dp30{width:30%;*width:29.9%;}
+.dp33{width:33.33%;*width:33.3%;}
+.dp35{width:35%;*width:34.9%;}
+.dp40{width:40%;*width:39.9%;}
+.dp45{width:45%;*width:44.9%;}
+.dp50{width:50%;*width:49.9%;}
+.dp55{width:55%;*width:54.9%;}
+.dp60{width:60%;*width:59.9%;}
+.dp65{width:65%;*width:64.9%;}
+.dp67{width:66.67%;*width:66.6%;}
+.dp70{width:70%;*width:69.9%;}
+.dp75{width:75%;*width:74.9%;}
+.dp80{width:80%;*width:79.9%;}
+.dp85{width:85%;*width:84.9%;}
+.dp90{width:90%;*width:89.9%;}
+.dp95{width:95%;*width:94.9%;}
+.dp100{width:100%;*width:99.9%;}
+
+.clear { display:block;clear:both;height:-1px!important; }
+.floatright { float:right; margin-left:10px; }
+.floatleft { float:left; margin-right:10px; }
+
+body { font-family:"Lucida Grande","bitstream vera sans",sans-serif; background:#fffeec url(../img/flora10.jpg);margin:0; padding:0; }
+#wrap {width:980px; margin: 0 auto;}
+#logo {background-color:#fffeec; padding:20px 0; border-bottom:solid 10px #3CA;}
+
+a:active{outline:none;}
+:focus{-moz-outline-style:none;}
+
+/** scrollable **/
+.scrollable{position:relative;overflow:hidden;width:680px;height:120px;border:1px solid #ccc;background:url(../img/h300.png) repeat-x;}
+/* root element for scrollable items. set to extremely large width to accomodate scrollable items.
+	set the width-height for the root element and not for this element. */
+.scrollable .items{width:20000em;position:absolute;clear:both;}
+.items div{float:left;width:680px;}
+.scrollable img{float:left;background-color:#fff;border:1px solid #ccc;width:100px;height:75px;-moz-border-radius:4px;-webkit-border-radius:4px;margin:20px 5px 20px 21px;padding:2px;}
+.scrollable .active{border:2px solid #000;position:relative;cursor:default;}
+
+/** buttons **/
+.scrollable{float:left;}
+/* nav buttons  */
+a.browse{background:url(../img/hori_large.png) no-repeat;display:block;width:30px;height:30px;float:left;cursor:pointer;font-size:1px;margin:40px 10px;}
+a.right{background-position:0 -30px;clear:right;margin-right:0;}
+a.left{margin-left:0;}
+a.up,a.down{background:url(../img/vert_large.png) no-repeat;float:none;margin:10px 50px;}
+a.down{background-position:0 -30px;}
+a.disabled{visibility:hidden !important;}
+a.right:hover,a.down:hover{background-position:-30px -30px;}
+a.right:active,a.down:active{background-position:-60px -30px;}
+a.left:hover,a.up:hover{background-position:-30px 0;}
+a.left:active,a.up:active{background-position:-60px 0;}
+
+/** tabs accordion **/
+#accordion{background:#999 url(../img/h300.png) 0 0;width:300px;border:1px solid #333; }
+#accordion h2{background:#ccc url(../img/h30.png);font-size:14px;font-weight:400;border:1px solid #fff;border-bottom:1px solid #ddd;cursor:pointer;margin:0;padding:5px 15px;}
+#accordion h2.current{cursor:default;background-color:#fff;}
+#accordion .pane{border:1px solid #fff;display:none;height:180px;color:#fff;font-size:12px;border-width:0 2px;padding:15px;}
+#accordion .pane h3{font-weight:400;font-size:16px;color:#999;margin:0 0 -5px;}
+
+/** slideshow **/
+.images{background:#fff url(../img/h300.png) repeat-x;border:1px solid #ccc;position:relative;height:300px;width:650px;float:left;cursor:pointer;/* -moz-border-radius:5px;-webkit-border-radius:5px;-moz-box-shadow:0 0 25px #999;-webkit-box-shadow:0 0 25px #999; */margin:15px;}
+.images div{display:none;position:absolute;top:0;left:0;height:300px;/* font-size:12px;margin:7px;padding:15px 30px 15px 15px; */}
+.images h3{font-size:22px;font-weight:400;color:#456;margin:0 0 20px;}
+
+/* tabs (the little circles below slides)  */
+.slidetabs{clear:both;margin-left:330px;}
+.slidetabs a{width:8px;height:8px;float:left;background:url(../img/navigator.png) 0 0 no-repeat;display:block;font-size:1px;margin:3px;}
+.slidetabs a:hover{background-position:0 -8px;}
+.slidetabs a.current{background-position:0 -16px;}
+.forward,.backward{float:left;margin-top:140px;background:#fff url(../img/hori_large.png) no-repeat;display:block;width:30px;height:30px;cursor:pointer;font-size:1px;text-indent:-9999em;}
+.forward{background-position:0 -30px;clear:right;}
+.forward:hover{background-position:-30px -30px;}
+.forward:active{background-position:-60px -30px;}
+.backward:hover{background-position:-30px 0;}
+.backward:active{background-position:-60px 0;}
+/* disabled navigational button. not needed when tabs are configured with rotate: true  */
+.disabled{visibility:hidden !important;}
+
+/** overlay/popup **/
+.simple_overlay{display:none;z-index:10000;background-color:#333;width:675px;min-height:200px;border:1px solid #666;-moz-box-shadow:0 0 90px 5px #000;-webkit-box-shadow:0 0 90px #000;}
+.simple_overlay .close{background-image:url(../img/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px;}
